@@ -2,14 +2,11 @@ import { useEffect, useState } from 'react';
 import { getAdvice } from '../DataContext/DataServices';
 
 function AdviceGenerator() {
-  const [adviceId, setAdviceId] = useState("");
-  const [adviceText, setAdviceText] = useState("");
+  const [adviceData, setAdviceData] = useState({});
 
   const getData = async () =>
   {
-    let advice = await getAdvice();
-    setAdviceId( advice.slip.id );
-    setAdviceText( advice.slip.advice );
+    setAdviceData(await getAdvice());
   }
 
   useEffect(() =>
@@ -25,11 +22,11 @@ function AdviceGenerator() {
           <div className="bg-[#313A49] rounded-[10px] min-h-[330px] w-[540px] max-[580px]:w-[342px] flex flex-col justify-evenly row-span-10 row-start-1 row-end-11 col-start-1">
 
             <div className="flex justify-center text-[#50F3A4] font-[Manrope] tracking-[5px] mt-[15px]">
-              <h1>ADVICE #{adviceId}</h1>
+              <h1>ADVICE #{adviceData?.slip?.id}</h1>
             </div>
 
             <div className="flex justify-center font-[Manrope] font-[800] text-[28px] text-center mx-[35px]">
-              <h1>"{adviceText}"</h1>
+              <h1>"{adviceData?.slip?.advice}"</h1>
             </div>
 
             <div className="flex justify-center mb-[20px]">
