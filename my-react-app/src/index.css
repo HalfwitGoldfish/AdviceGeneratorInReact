@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Manrope";
+    src: url("/Fonts/Manrope-VariableFont_wght.ttf");
+}
