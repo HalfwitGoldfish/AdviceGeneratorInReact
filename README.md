@@ -13,8 +13,8 @@
  You can use bootstrap or tailwind
  Goal is to recreate this challenge as close to the design as possible and having it function properly.
 
-*Reviewers Name*: 
+*Reviewers Name*: Brock Spacek
 
-*Peer Review*: 
+*Peer Review*: Everything is exactly like the image given for us to follow. I loved how you were able to make your own rng random number to make the api call not delayed and runs smoothly. Great Job overall it looks great
 
 *Vercel Link*: https://advice-generator-in-react-six.vercel.app
